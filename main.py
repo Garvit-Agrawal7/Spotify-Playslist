@@ -30,7 +30,7 @@ user_id = sp.current_user()["id"]
 songs = []
 year = date.split("-")[0]
 for track in tracks:
-    song = sp.search(q=f"track:{track}%20year:{year}", type='track')
+    song = sp.search(q=f"track:{track}", type='track')
     try:
         uri = song["tracks"]["items"][0]["uri"]
         songs.append(uri)
